@@ -4,20 +4,92 @@
   <meta charset="UTF-8">
   <title>DELTARF</title>
   <style>
-    body { font-family: Arial; text-align: center; margin: 2em; }
-    h1 { color: #003366; }
-    .files a { display: block; margin: 10px; font-size: 1.2em; color: #0066cc; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0 0 0;
+      font-size: 1.2em;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    img.team-photo {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin: 20px 0;
+    }
+
+    .abstract {
+      text-align: left;
+      margin-top: 30px;
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    .files {
+      margin-top: 40px;
+    }
+
+    .files a {
+      display: block;
+      font-size: 1.2em;
+      color: #0056b3;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+
+    .files a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <h1>We are DELTARF group</h1>
-  <img src="team.jpeg" alt="Team Photo" width="400" />
+  <header>
+    <h1>We are DELTARF Group</h1>
+    <p>Bilkent University – Department of Electrical and Electronics Engineering</p>
+  </header>
 
-  <h2>Documents</h2>
-  <div class="files">
-    <a href="report.pdf" target="_blank">📄 Project Report</a>
-    <a href="booklet.pdf" target="_blank">📘 Booklet</a>
+  <div class="content">
+    <img src="team.jpeg" alt="Team Photo" class="team-photo">
+
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        In this project, a GNSS-independent radio-navigation subsystem was developed to estimate delta-position using RF signals. Requested by ASELSAN, the system addresses navigation needs in GNSS-denied environments such as urban canyons and military zones. The project has two phases: Phase 1 estimates one-dimensional (1D) displacement using phase and frequency differences from two transmitters and one receiver; Phase 2 targets two-dimensional (2D) vectorial movement using three transmitters. Signal processing on ADALM-Pluto Software-Defined Radios (SDRs) uses Phase Locked Loop (PLL) for frequency synchronization and Delay Locked Loop (DLL) for signal separation. MATLAB and GNU Radio were used for simulation and real-time processing. External clocks replaced unstable internal ones, with polynomial-based drift compensation enhancing stability. Frequency Division Multiple Access (FDMA) was employed for signal separation, and a doppler-based method was used to extract velocity and compute displacement. A Raspberry Pi with LCD provides live feedback. The system achieved ±5 cm accuracy and offers a compact, modular solution for defense applications.
+      </p>
+    </div>
+
+    <div class="files">
+      <h2>Documents</h2>
+      <a href="report.pdf" target="_blank">📄 Project Report</a>
+      <a href="booklet.pdf" target="_blank">📘 Booklet</a>
+    </div>
   </div>
 
 </body>
