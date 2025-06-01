@@ -66,10 +66,41 @@
     .files a:hover {
       text-decoration: underline;
     }
+
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: center;
+    }
+
+    thead tr {
+      background-color: #dee2e6;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>We are DELTARF Group</h1>
     <p>Bilkent University – Department of Electrical and Electronics Engineering</p>
@@ -90,41 +121,45 @@
       <a href="report.pdf" target="_blank">📄 Project Report</a>
       <a href="booklet.pdf" target="_blank">📘 Booklet</a>
     </div>
-     <div class="abstract">
-    <h2 style="text-align: center;">Introductory Video</h2>
-    <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-    <video width="640" height="360" controls>
-      <source src="b5_video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
 
-    <h2 style="text-align: center;">2D Example Implementation</h2>
-    <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-    <video width="640" height="360" controls>
-      <source src="demo2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="video-wrapper">
+      <h2>Introductory Video</h2>
+      <video controls>
+        <source src="b5_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-    <h2 style="text-align: center;">1D Example Implementation</h2>
-    <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-    <video width="640" height="360" controls>
-      <source src="demo1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="video-wrapper">
+      <h2>2D Example Implementation</h2>
+      <video controls>
+        <source src="demo2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-    <h2>Example Results from 100 Trials</h2>
+    <div class="video-wrapper">
+      <h2>1D Example Implementation</h2>
+      <video controls>
+        <source src="demo1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <h2 style="text-align: center;">Example Results from 100 Trials</h2>
     <div style="overflow-x:auto;">
-     <table border="1" cellpadding="5" cellspacing="0" style="margin-top:20px; border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr style="background-color: #dee2e6;">
-      <th>Run ID</th>
-      <th>Theoretical [cm]</th>
-      <th>Experimental [cm]</th>
-      <th>Error (%)</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr><td>1</td><td>11.00</td><td>12.00</td><td>9.09</td></tr>
+      <!-- Table rows will go here (can be copy-pasted in parts to avoid bloat) -->
+      <table>
+        <thead>
+          <tr>
+            <th>Run ID</th>
+            <th>Theoretical [cm]</th>
+            <th>Experimental [cm]</th>
+            <th>Error (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr><td>1</td><td>11.00</td><td>12.00</td><td>9.09</td></tr>
 <tr><td>2</td><td>15.00</td><td>17.00</td><td>13.33</td></tr>
 <tr><td>3</td><td>10.00</td><td>9.91</td><td>0.90</td></tr>
 <tr><td>4</td><td>30.00</td><td>33.00</td><td>10.00</td></tr>
@@ -224,12 +259,9 @@
 <tr><td>98</td><td>40.00</td><td>40.00</td><td>0.00</td></tr>
 <tr><td>99</td><td>12.00</td><td>15.00</td><td>25.00</td></tr>
 <tr><td>100</td><td>18.00</td><td>18.30</td><td>1.67</td></tr>
-  </tbody>
-</table>
-
+        </tbody>
+      </table>
     </div>
-       
   </div>
-
 </body>
 </html>
